@@ -32,7 +32,7 @@ function saveDone() {
         alert("미완료 상태로 변경 되었습니다.")
     }
 
-    location.href = 'todolist.html';
+    location.href = 'todoList.html';
 
 }
 
@@ -65,7 +65,7 @@ function saveContent() {
 
     localStorage.setItem("todoVoList", JSON.stringify(voList));
 
-    location.href = 'todolist.html';
+    location.href = 'todoList.html';
 }
 
 function editTodo() {
@@ -81,7 +81,7 @@ function editTodo() {
     voList[no].title = title;
 
     localStorage.setItem("todoVoList", JSON.stringify(voList));
-    location.href = 'todolist.html';
+    location.href = 'todoList.html';
 }
 
 function delTodo() {
