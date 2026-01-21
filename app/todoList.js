@@ -1,3 +1,26 @@
+function addTodo() {
+    const title = document.querySelector("input[name=title]").value;
+    const vo = {
+        "title": title,
+        "done": true,
+        "created_at": new Date(),
+    };
+
+    let arr = JSON.parse(localStorage.getItem("todoVoList"));
+    if (!arr) { arr = []; }
+    arr.push(vo);
+
+    localStorage.setItem("todoVoList", JSON.stringify(arr));
+
+    if (title === "") return;
+
+    alert("할 일 등록 완료 ! ")
+
+    title.value = "";
+    location.href = 'todoList.html'
+
+}
+
 function displayVoList() {
     const listArea = document.querySelector("#listArea");
     const voList = JSON.parse(localStorage.getItem("todoVoList"));
@@ -73,6 +96,7 @@ function f01(evt) {
 function clearAll() {
     listArea = document.querySelector("#listArea");
     listArea.innerHTML = "";
+    localStorage.clear();
 }
 
 //삭제 기능 재 구현

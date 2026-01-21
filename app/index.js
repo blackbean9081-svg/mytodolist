@@ -17,6 +17,6 @@ function addTodo() {
     alert("할 일 등록 완료 ! ")
 
     title.value = "";
-    location.href = 'todoDetail.html'
+    location.href = 'todoList.html'
 
 }
