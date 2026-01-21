@@ -6,37 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
     <script defer src="./index.js"></script>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./layout.css">
 </head>
 
 <body>
-    <h1>To - Do List</h1>
+    <h1><a href="index.html">To - Do List</a></h1>
     <div>
         <input type="text" name="title" placeholder="할 일을 적어보세요">
         <button onclick="addTodo()">추가하기</button>
 
     </div>
-    <div id="listArea"></div>
-
-    <div id="modal" onclick="closeModal();">
-        <div id="todoDetailArea" onclick="f01(event);">
-            <label>번호 : </label><span id="todoDetailNo"></span>
-            <br>
-            <label>제목 : </label><span id="todoDetailTitle"></span>
-            <br>
-            <label>내용 : </label><textarea id="todoDetailContent" placeholder="내용을 입력하세요"></textarea>
-            <br>
-            <label>완료여부 : </label><span id="todoDetailDone"></span>
-            <br>
-            <label>생성일시 : </label><span id="todoDetailCreatedAt"></span>
-            <br>
-            <button onclick="saveContent()" class="small-btn">내용 저장</button>
-            <button onclick="editTodo()" class="small-btn">수정</button>
-            <button onclick="delTodo()" class="small-btn">삭제</button>
-        </div>
-    </div>
-
-    <button onclick="clearAll()">초기화</button>
 
 </body>
 
