@@ -15,8 +15,6 @@ function addTodo() {
     if (title === "") return;
 
     alert("할 일 등록 완료 ! ")
-
-    title.value = "";
     location.href = 'todoList.html'
 
 }
@@ -29,15 +27,12 @@ function displayVoList() {
     for (let i = 0; i < voList.length; ++i) {
         str +=
             `<div class="todo-item">
-                <input type="checkbox">
-                
-                <span class="todo-text" onclick="displayVoDetail(${i})">
+                <input type="checkbox">                
+                <span class="todo-text" onclick="setSelectedTodoNo(${i})">
                     <a href='todoDetail.html'>
                     ${i + 1} : ${voList[i].title}
                     </a>
                 </span>
-
-
             </div>`;
     }
 
@@ -60,7 +55,6 @@ function clearAll() {
     listArea = document.querySelector("#listArea");
     listArea.innerHTML = "";
     localStorage.clear();
-    //초기화를 했으니 다시 메인화면으로 
     location.href = `index.html`;
 
 }

@@ -2,7 +2,7 @@ function addTodo() {
     const title = document.querySelector("input[name=title]").value;
     const vo = {
         "title": title,
-        "done": true,
+        "done": false,
         "created_at": new Date(),
     };
 
@@ -19,4 +19,8 @@ function addTodo() {
     title.value = "";
     location.href = 'todoList.html'
 
+}
+
+function selectList() {
+    location.href = 'todoList.html'
 }
