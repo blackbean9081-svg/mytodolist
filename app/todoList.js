@@ -22,13 +22,17 @@ function addTodo() {
 function displayVoList() {
     const listArea = document.querySelector("#listArea");
     const voList = JSON.parse(localStorage.getItem("todoVoList"));
-
     let str = "";
+
     for (let i = 0; i < voList.length; ++i) {
+        let finished = "";
+        if (voList[i].done) {
+            finished = "finish"
+        }
+
         str +=
-            `<div class="todo-item">
-                <input type="checkbox">                
-                <span class="todo-text" onclick="setSelectedTodoNo(${i})">
+            `<div class="todoItem">                                
+                <span class="todoText ${finished}" onclick="setSelectedTodoNo(${i})">
                     <a href='todoDetail.html'>
                     ${i + 1} : ${voList[i].title}
                     </a>
@@ -43,8 +47,6 @@ function displayVoList() {
 window.onload = function () {
     displayVoList();
 }
-
-
 
 
 function f01(evt) {

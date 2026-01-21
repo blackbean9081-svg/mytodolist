@@ -157,11 +157,11 @@ body>button:hover {
     border-color: gray;
 }
 
-.todo-text a {
+.todoText a {
     color: black;
     text-decoration: none;
 }
 
-.todo-text a:visited {
+.todoText a:visited {
     color: black;
 }

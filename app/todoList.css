@@ -13,7 +13,7 @@
     min-height: 200px;
 }
 
-.todo-item {
+.todoItem {
     display: flex;
     align-items: center;
     padding: 12px 0;
@@ -23,11 +23,11 @@
     font-weight: 500;
 }
 
-.todo-item:last-child {
+.todoitem:last-child {
     border-bottom: none;
 }
 
-.todo-text {
+.todoText {
     text-decoration: none;
     flex-grow: 1;
     margin: 0 12px;
@@ -38,11 +38,11 @@
     white-space: nowrap;
 }
 
-.todo-text:hover {
+.todoText:hover {
     color: gray;
 }
 
-.todo-item button {
+.todoItem button {
     background-color: white;
     color: black;
     border: 1px solid lightgray;
@@ -52,4 +52,9 @@
     cursor: pointer;
     margin-left: 5px;
     transition: all 0.2s;
+}
+
+.finish {
+    text-decoration: line-through;
+    color: black;
 }

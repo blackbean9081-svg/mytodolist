@@ -69,3 +69,22 @@
     color: white;
     border: 1px solid black;
 }
+
+#todoDetailTitle {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: inherit;
+    outline: none;
+}
+
+#todoDetailTitle:focus {
+    background-color: white;
+    border-color: black;
+}

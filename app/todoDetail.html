@@ -19,7 +19,7 @@
             <div id="todoDetailArea">
                 <label>번호 : </label><span id="todoDetailNo"></span>
                 <br>
-                <label>제목 : </label><span id="todoDetailTitle"></span>
+                <label>제목 : </label><input type="text" id="todoDetailTitle" placeholder="제목을 입력하세요">
                 <br>
                 <textarea id="todoDetailContent" placeholder="내용을 입력하세요"></textarea>
                 <br>
@@ -27,9 +27,8 @@
                 <br>
                 <label>생성일시 : </label><span id="todoDetailCreatedAt"></span>
                 <br>
-                <button onclick="saveContent()" class="small-btn">내용 저장</button>
-                <button onclick="editTodo()" class="small-btn">수정</button>
-                <button onclick="delTodo()" class="small-btn">삭제</button>
+                <button onclick="saveTodoList()" class="small-btn">내용 저장</button>
+                <button onclick="delTodo()" class="small-btn">할 일 삭제</button>
             </div>
         </div>
 
