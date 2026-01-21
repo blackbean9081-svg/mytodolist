@@ -36,8 +36,7 @@ function displayVoList() {
                     ${i + 1} : ${voList[i].title}
                 </span>
 
-                <button onclick="editTodo(${i})" class="small-btn">수정</button>
-                <button onclick="delTodo(${i})" class="small-btn">삭제</button>
+
             </div>`;
     }
 
@@ -51,7 +50,7 @@ window.onload = function () {
 
 
 function displayVoDetail(no) {
-    const voList = JSON.parse(localStorage.getItem("todoVoList")) || [];
+    const voList = JSON.parse(localStorage.getItem("todoVoList"));
     const vo = voList[no];
 
     document.querySelector("#todoDetailNo").innerHTML = no;
@@ -95,33 +94,13 @@ function f01(evt) {
     evt.stopPropagation();
 }
 
-
-
 function clearAll() {
     listArea = document.querySelector("#listArea");
     listArea.innerHTML = "";
 }
 
-function delTodo() {
-    const checkedBoxes = document.querySelectorAll("input[type='checkbox']:checked");
+//삭제 기능 재 구현
+
+//수정 기능 재구현
 
 
-    for (const box of checkedBoxes) {
-        box.parentElement.remove();
-    }
-}
-
-function editTodo() {
-    const checkedBoxes = document.querySelectorAll("input[type='checkbox']:checked");
-
-
-    for (const box of checkedBoxes) {
-        const textNode = box.nextSibling;
-        const currentText = textNode.nodeValue.trim();
-        const newText = prompt("수정할 내용을 입력하세요:", currentText);
-
-        if (newText !== null && newText.trim() !== "") {
-            textNode.nodeValue = " " + newText + " ";
-        }
-    }
-}
